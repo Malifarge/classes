@@ -8,7 +8,7 @@ class TV {
         this.volume = 50
     }
 
-    increaseVolume (num) {
+    increaseVolume = (num) => {
         if (this.volume+num <= 100){
             this.volume += num
         } else {
@@ -16,7 +16,7 @@ class TV {
         }
     }
 
-    decreaseVolume (num) {
+    decreaseVolume = (num) => {
         if (this.volume-num >=0) {
             this.volume -= num
         }else {
@@ -24,13 +24,13 @@ class TV {
         }
     }
 
-    changeChannel (num) {
+    changeChannel = (num) => {
         if (num <=50 && num > 0 ){
             this.channel = num
         }
     }
 
-    describe() {
+    describe = () => {
         console.log(`you have a ${this.brand} TV and on the channel ${this.channel} with a volume of ${this.volume} `);
     }
 
@@ -95,7 +95,7 @@ class Team {
         this.Hi = Players.Hi
     }
 
-    teamHi() {
+    teamHi = () => {
         console.log(this.Hi);
     }    
     

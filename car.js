@@ -7,15 +7,15 @@ class Car {
         this.speed = speed
     }
 
-    accelerate(num){
+    accelerate = (num) => {
         this.speed += num
     }
 
-    brake(num){
+    brake = (num) => {
         this.speed -= num
     }
 
-    describe(){
+    describe = () => {
         console.log(`${this.brand} running at ${this.speed} km/h`);
     }
 }
