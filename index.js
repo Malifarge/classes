@@ -113,4 +113,33 @@ const teamBest = new Team(Luigi,Birdo)
 teamBest.teamHi()
 console.log(teamBest);
 
+class Games{
+    constructor (team1,team2){
+        this.team1 = team1
+        this.team2 = team2
+        this.point1 = 0
+        this.point2 = 0
+    }
 
+    Win =(num) => {
+        const random = Math.floor(Math.random()*2)
+        for (let i =0 ; i<=num;i++){
+            if (random===0){
+                this.point1++
+            }else{
+                this.point2++
+            }
+        }
+        if (this.point1>this.point2){
+            console.log(`${this.team1.Captain} win`);
+        }else if (this.point2>this.point1){
+            console.log(`${this.team2.Captain} win`);
+        }else{
+            console.log("Egalité");
+        }
+    }
+}
+
+const Match1 = new Games (teamMarioToad,teamBest)
+
+Match1.Win(10)
