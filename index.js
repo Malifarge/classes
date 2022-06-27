@@ -53,3 +53,64 @@ LG.changeChannel(5)
 console.log(LG);
 
 LG.describe()
+
+// 3 - Video games
+
+// JV : "Mario smash football"
+
+class Captain {
+    constructor (Name, type, color){
+        this.Name = Name
+        this.type = type
+        this.color = color
+    }
+}
+
+const Mario = new Captain ("Mario","Complete","red")
+const Luigi = new Captain ("Luigi The Best", "Collectif", "green")
+
+console.log(Mario);
+console.log(Luigi);
+
+class Players {
+    constructor (Name,Hi){
+        this.Name = Name
+        this.Hi = Hi
+    }
+}
+
+const Toad = new Players ("Toad", "HIIIIIII")
+const Birdo = new Players ("Birdo the best","Yeaaah")
+
+console.log(Toad);
+console.log(Birdo);
+
+
+class Team {
+    constructor (Captain,Players){
+        this.Captain = Captain.Name
+        this.players = Players.Name
+        this.color =  Captain.color
+        this.gameplay = Captain.type
+        this.Hi = Players.Hi
+    }
+
+    teamHi() {
+        console.log(this.Hi);
+    }    
+    
+}
+
+const teamMarioToad = new Team(Mario,Toad)
+teamMarioToad.teamHi()
+console.log(teamMarioToad);
+
+const teamLuigiToad = new Team(Luigi,Toad)
+teamLuigiToad.teamHi()
+console.log(teamLuigiToad);
+
+const teamBest = new Team(Luigi,Birdo)
+teamBest.teamHi()
+console.log(teamBest);
+
+
