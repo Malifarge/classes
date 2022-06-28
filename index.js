@@ -30,6 +30,11 @@ class TV {
         }
     }
 
+    reset = () => {
+        this.channel = 1
+        this.volume=50
+    }
+
     describe = () => {
         console.log(`you have a ${this.brand} TV and on the channel ${this.channel} with a volume of ${this.volume} `);
     }
@@ -53,6 +58,9 @@ LG.changeChannel(5)
 console.log(LG);
 
 LG.describe()
+
+LG.reset()
+console.log(LG);
 
 // 3 - Video games
 
