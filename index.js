@@ -8,19 +8,15 @@ class TV {
         this.volume = 50
     }
 
-    increaseVolume = (num) => {
-        if (this.volume+num <= 100){
-            this.volume += num
-        } else {
-            this.volume = 100
-        }
+    increaseVolume = () => {
+        if (this.volume < 100){
+            this.volume += 1
+        } 
     }
 
-    decreaseVolume = (num) => {
-        if (this.volume-num >=0) {
-            this.volume -= num
-        }else {
-            this.volume = 0
+    decreaseVolume = () => {
+        if (this.volume > 0) {
+            this.volume -= 1
         }
     }
 
@@ -45,10 +41,14 @@ const LG = new TV ("LG")
 
 console.log(LG);
 
-LG.increaseVolume(30)
+for (let i = 0; i < 52;i++){
+    LG.increaseVolume()
+}
 console.log(LG);
 
-LG.decreaseVolume(20)
+LG.decreaseVolume()
+LG.decreaseVolume()
+LG.decreaseVolume()
 console.log(LG);
 
 LG.changeChannel(26)
